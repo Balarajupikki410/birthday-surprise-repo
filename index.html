@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday My Love ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Cormorant Garamond (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       PAGE 1 — LANDING
+  ============================================================ -->
+  <section id="page1" class="page active">
+
+    <!-- Animated canvas for particles/hearts -->
+    <canvas id="canvas1"></canvas>
+
+    <!-- Soft radial spotlight layers -->
+    <div class="spotlight s1"></div>
+    <div class="spotlight s2"></div>
+    <div class="spotlight s3"></div>
+
+    <div class="p1-content">
+      <p class="p1-eyebrow">a letter written in heartbeats…</p>
+      <h1 class="p1-title">
+        <span class="word">Dear</span>
+        <span class="word italic accent">Soni,</span>
+        <span class="word">this</span>
+        <span class="word italic">one's</span>
+        <span class="word accent">for you.</span>
+      </h1>
+
+      <p class="p1-date">Today the universe celebrates <em>you</em> ✦</p>
+
+      <button id="surpriseBtn" class="glow-btn" aria-label="Open birthday surprise">
+        <span class="btn-bg"></span>
+        <span class="btn-text">Open ❤️</span>
+        <span class="btn-shimmer"></span>
+      </button>
+    </div>
+
+    <!-- Floating petal decoration -->
+    <div class="petal-ring" id="petalRing"></div>
+
+  </section>
+
+  <!-- ============================================================
+       PAGE 2 — MESSAGE
+  ============================================================ -->
+  <section id="page2" class="page">
+
+    <canvas id="canvas2"></canvas>
+
+    <div class="spotlight s4"></div>
+    <div class="spotlight s5"></div>
+
+    <div class="p2-inner">
+      <!-- Typing message area -->
+      <div class="message-area">
+        <p class="from-label">From my heart to yours</p>
+
+        <!-- 💬 EDIT: Update lines in script.js → typingLines array -->
+        <div class="typing-wrap">
+          <p id="typingText" class="typing-text"></p>
+          <span class="cursor">|</span>
+        </div>
+
+        <!-- 🎂 EDIT: Change name below -->
+        <h2 class="big-wish" id="bigWish">
+          Happy Birthday,<br />
+          <span class="name-highlight">Your Love</span>❤️
+        </h2>
+
+        <p class="personal-note" id="personalNote">
+          There are people who change your life just by being in it —<br />
+          and then there is <em>you</em>, Soni.<br /><br />
+          You are the kind of magic that doesn't need a reason.<br />
+          The way you laugh heals things words never could.<br />
+          The way you love makes the whole world feel safe.<br /><br />
+          I don't know what I did to deserve your light,<br />
+          but I promise — every day I'll try to be worthy of it.<br /><br />
+          Today isn't just your birthday.<br />
+          It's <em>my favourite day</em> — because it gave me <em>you</em>.
+        </p>
+
+        <div class="signature" id="signature">
+          <span>— with every beat of my heart</span>
+          <strong>Forever Yours</strong>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Floating hearts layer (JS-injected) -->
+    <div id="floatingHearts" class="floating-hearts-layer"></div>
+
+  </section>
+
+  <!-- Background audio -->
+  <!-- 🎵 EDIT: Replace src with your music file, e.g. "music.mp3"
+       You can also use a hosted URL. Format: mp3/ogg. -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="" type="audio/mpeg" />
+    <!-- Fallback: place music.mp3 next to index.html and set src="music.mp3" -->
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
